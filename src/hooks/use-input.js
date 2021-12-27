@@ -21,9 +21,9 @@ const inputStateReducer = (state, action) => {
 };
 
 const useInput = (validateValue) => {
-  const [inputState, dispatch] = useReducer(inputStateReducer, {
+  const [inputState, dispatch] = useReducer(inputStateReducer, 
     initialInputState,
-  });
+  );
 
   const valueIsValid = validateValue(inputState.value);
   const hasError = !valueIsValid && inputState.isTouched;
